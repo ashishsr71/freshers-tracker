@@ -81,8 +81,10 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
+     
       <div id="recaptcha-container"></div> {/* reCAPTCHA needs this */}
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <Link href={"/cashflow"}>  <button className='bg-gray-500 rounded-xl align-center'>See transctions</button></Link> 
         <h1 className="text-2xl font-bold mb-6 text-center">Log In</h1>
         
         <div className="flex border-b mb-4">
@@ -129,12 +131,12 @@ export default function LoginPage() {
           </form>
         )}
 
-        <p className="mt-6 text-center text-sm">
+        {/* <p className="mt-6 text-center text-sm">
           Don't have an account?{' '}
           <Link href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
             Sign Up
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );

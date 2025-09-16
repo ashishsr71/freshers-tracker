@@ -1,4 +1,6 @@
 import Header from "@/components/header";
+import { redirect } from 'next/navigation';
+
 // import Metrics from "@/components/metrics";
 // import Summary from "@/components/summary";
 // import Transactions from "@/components/transctions";
@@ -6,6 +8,8 @@ import Header from "@/components/header";
 
 
 export default function Home() {
+   redirect('/cashflow');
+
   return (
   <div className="min-h-screen bg-gray-50">
     <Header/>
