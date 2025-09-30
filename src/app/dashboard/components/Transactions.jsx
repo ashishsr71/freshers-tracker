@@ -24,7 +24,7 @@ export function Transactions() {
   // Fetching logic remains the same
   useEffect(() => {
     if (!user) { setTransactions([]); return; }
-    const q = query(collection(db, 'transactions'), where("uid", "==", user.uid), orderBy('timestamp', 'desc'));
+    const q = query(collection(db, 'transactions'), orderBy('timestamp', 'desc'));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setTransactions(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     });
