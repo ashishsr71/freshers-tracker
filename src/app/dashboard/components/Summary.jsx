@@ -55,7 +55,7 @@ export function Summary() {
       return;
     }
     const transactionsRef = collection(db, 'transactions');
-    const q = query(transactionsRef, where("uid", "==", user.uid));
+    const q = query(transactionsRef);
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => items.push({ id: doc.id, ...doc.data() }));
